@@ -9,7 +9,7 @@ ARG KALI_METAPACKAGE=core
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 RUN apt-get -y upgrade
-RUN apt-get -y install kali-linux-${KALI_METAPACKAGE}
+RUN apt-get -y install kali-linux-large
 RUN apt-get clean
 
 # Install kali desktop
@@ -22,9 +22,9 @@ ENV USER root
 
 ENV VNCEXPOSE 0
 ENV VNCPORT 5900
-ENV VNCPWD changeme
+ENV VNCPWD root
 ENV VNCDISPLAY 1920x1080
-ENV VNCDEPTH 16
+ENV VNCDEPTH 32
 
 ENV NOVNCPORT 8080
 
